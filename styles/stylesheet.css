@@ -1,0 +1,252 @@
+/* Color Palette */
+:root{
+    --white-color: white;
+    --golden-color: #cc9900;
+    --grey-color: #dde0df;
+    --footer-color: #191919;
+    --heading-font: 'Yeseva One', cursive, sans-serif;
+    --paragraph-font: 'Lato', sans-serif;
+    --menu-review-font: 'Gentium Book Basic', serif, sans-serif;
+    --footer-font: 'Open Sans', sans-serif;
+    
+}
+
+html{
+    font-size: 62.5%;
+    
+}
+
+/* Typography */
+h1,
+h2,
+h3{
+    font-family: var(--heading-font);
+    margin: 0;
+}
+h1{
+    font-size: 7.2rem;
+}
+h2{
+    font-size: 2.9rem;
+}
+h3{
+    font-size: 1.7rem;
+}
+p{
+    font-size: 1.3rem;
+    font-family: var(--paragraph-font)
+}
+li{
+    font-size: 1.7rem;
+    font-family: var(--menu-review-font)
+}
+
+
+/* menu */
+nav{
+    background-color: var(--golden-color);
+    color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 1rem 0rem 1rem;
+}
+nav .logo{
+    width: 80px;
+    height: 50px;
+    margin: 0rem;
+}
+
+nav ul{
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+   
+}
+
+nav ul li{
+    padding: 1rem 0;
+    color: var(--grey-color);
+    border-bottom: 1px solid ;
+    transition: color 0.3s;
+    cursor: pointer;
+    
+}
+
+nav ul li:hover{
+    color: var(--white-color);
+}
+
+nav .menu__icon{
+    fill: var(--white-color);
+    width: 40px;
+    height: 40px;
+    display: block;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+/* navigation-animation */
+nav .nav__toggler{
+    opacity: 0.5;
+    transition: box-shadow 0.15s;
+
+}
+nav.collapsible--expanded .nav__toggler{
+    opacity: 1;
+    box-shadow: 0 0 5px 1px rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+
+nav .icons{
+    display: none;
+}
+
+@media  screen and (min-width: 768px) {
+   
+    nav .logo{
+        margin-left: 2rem;
+        width: 90px;
+        height:auto;
+    }
+    nav .menu__icon{
+        display: none;
+    }
+    nav ul{
+        width: auto;
+        display: flex;
+        max-height: 100%;
+        opacity: 1;
+        cursor: none;
+        margin-left: 3%;
+
+    }
+    nav ul li{
+        border: 0;
+        color: var(--white-color);
+        transition: color 0.3s;
+        cursor: pointer;
+        margin-right: 2rem; 
+    }
+    nav ul li{
+        margin-right: 2rem; 
+    }
+    nav ul li:last-child{
+        margin-right: 0.5rem;
+    }
+    nav ul li:hover{
+        color: var(--golden-color);
+    }
+    nav .icons{
+        display: block;
+        margin-right: 3rem;
+    }
+    nav .icons .icon{
+        width: 20px;
+        height: 20px;
+        margin-right: 0.3rem;
+        
+    }
+}
+
+@media  screen and (min-width: 1024px) {
+   
+    nav .logo{
+        margin-left: 80%;
+    }
+    nav ul{
+        margin-left: 20%;
+    }
+    nav ul li:last-child{
+        margin-right: 1rem;
+    }
+    nav .icons{
+        margin-right: 11%;
+    }
+    nav .icons .icon{
+        margin-right: 0.5rem;
+        
+    } 
+}
+@media  screen and (min-width: 1440px) {
+   
+    nav .logo{
+        margin-left: 80%;
+    }
+    nav ul{
+        margin-left: 40%;
+    }
+   
+    nav ul li:last-child{
+        margin-right: 1rem;
+    }
+    nav .icons{
+        margin-right: 11%;
+    }
+    nav .icons .icon{
+        margin-right: 0.5rem; 
+    }
+    
+}
+
+@media  screen and (min-width: 2560px) {
+   
+    nav .logo{
+        margin-left: 250%;   
+    }
+    nav ul{
+        margin-left: 63%;
+
+    }
+
+    nav ul li:last-child{
+        margin-right: 0rem;
+    }
+    
+    nav .icons{
+        margin-right: 10%;
+    }
+    nav .icons .icon{
+        margin-right: 0.5rem;    
+    } 
+}
+
+/* footer */
+footer{
+    background-color: var(--footer-color);
+    color: var(--white-color);
+    width: 100vw ;
+}
+
+.collapsible__header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.collapsible__content{
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+/* footer-animation */
+.icon__container .collapsible__chevron{
+    width: 30px;
+    height: 30px;
+    fill: var(--white-color);
+}
+.collapsible__chevron{
+    transition: transform 0.3s;
+}
+.collapsible--expanded .collapsible__chevron{
+    transform: rotate(90deg);
+
+}
+
+.collapsible--expanded .collapsible__content{
+    max-height: 100vh;
+    opacity: 1;
+}
