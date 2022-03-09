@@ -44,13 +44,16 @@ li{
 
 /* menu */
 nav{
-    background-color: var(--golden-color);
+    background-color: transparent;
     color: var(--white-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     padding: 1rem 1rem 0rem 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 nav .logo{
     width: 80px;
@@ -61,7 +64,7 @@ nav .logo{
 nav ul{
     width: 100%;
     list-style-type: none;
-    padding: 0;
+    padding: 1rem;
    
 }
 
@@ -69,19 +72,20 @@ nav ul li{
     padding: 1rem 0;
     color: var(--grey-color);
     border-bottom: 1px solid ;
-    transition: color 0.3s;
     cursor: pointer;
+    transition: transform 0.5s;
     
 }
 
 nav ul li:hover{
-    color: var(--white-color);
+    transform: scale(1.2);
 }
 
 nav .menu__icon{
     fill: var(--white-color);
     width: 40px;
     height: 40px;
+    margin-right: 20px;
     display: block;
     opacity: 0.5;
     cursor: pointer;
@@ -126,7 +130,6 @@ nav .icons{
     nav ul li{
         border: 0;
         color: var(--white-color);
-        transition: color 0.3s;
         cursor: pointer;
         margin-right: 2rem; 
     }
@@ -136,17 +139,16 @@ nav .icons{
     nav ul li:last-child{
         margin-right: 0.5rem;
     }
-    nav ul li:hover{
-        color: var(--golden-color);
-    }
     nav .icons{
         display: block;
         margin-right: 3rem;
+
     }
     nav .icons .icon{
         width: 20px;
         height: 20px;
         margin-right: 0.3rem;
+        fill: var(--golden-color);
         
     }
 }
@@ -170,6 +172,7 @@ nav .icons{
         
     } 
 }
+
 @media  screen and (min-width: 1440px) {
    
     nav .logo{
@@ -190,6 +193,7 @@ nav .icons{
     }
     
 }
+
 
 @media  screen and (min-width: 2560px) {
    
@@ -212,6 +216,148 @@ nav .icons{
         margin-right: 0.5rem;    
     } 
 }
+
+/* hero */
+.hero{
+    background-image: url(/images/Bg.png);
+    background-position: right 35% bottom 45%;
+    box-shadow: inset 0 0 5px 2px #282a2d;
+    width: 100vw;
+    height: 100vh;
+    background-size:cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.hero h1{
+    text-align: center;
+    font-size: clamp(1rem, 6.6vw, 15rem );
+    padding: 0 7rem;
+    font-weight: 500;
+    color: var(--white-color);
+    -webkit-text-stroke: 0.5px rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.020);
+}
+
+.hero .hero_divider{
+    width: 13rem;
+    margin: 3rem 0;
+}
+
+.hero .buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.hero button{
+    width: 13rem;
+    height: 4rem;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-family: var(--paragraph-font);
+    margin: 1.3rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.hero .primary{
+    background-color: rgba(0, 0, 0, 0.400); 
+    border: 1px solid rgba(0, 0, 0, 0.824);
+}
+
+.hero .secondary{
+    background-color: rgba(255, 255, 255, 0.200);
+    border: 1px solid rgba(255, 255, 255, 0.68);
+}
+
+.hero .primary:hover{
+    background-color: rgba(0, 0, 0, 0.600); 
+    transform: scale(1.1)
+}
+
+.hero .secondary:hover{
+    background-color: rgba(255, 255, 255, 0.400);
+    transform: scale(1.1)
+    
+}
+@media screen and (min-width: 778px) and (max-width: 869px) {
+    .hero{
+        background-position: none;
+    }
+.hero h1{
+    padding: 0 11rem;
+    font-size: clamp(2.7rem, 6.7vw, 15rem );
+}
+
+.hero .hero_divider{
+    width: 20rem;
+    margin: 4rem 0;
+}
+
+.hero .buttons{
+    display: block;
+}
+
+.hero button{
+    width: 18rem;
+    height: 5rem;
+    font-size: 1.4rem;
+    margin: 1.3rem;
+}
+}
+@media screen and (min-width: 870px) and (max-width: 1440px) {
+    .hero{
+        background-position: none;
+    }
+.hero h1{
+    padding: 0 11rem;
+    font-size: clamp(2.7rem, 7vw, 15rem );
+}
+
+.hero .hero_divider{
+    width: 20rem;
+    margin: 4rem 0;
+}
+
+.hero .buttons{
+    display: block;
+}
+
+.hero button{
+    width: 18rem;
+    height: 5rem;
+    font-size: 1.4rem;
+    margin: 1.3rem;
+}
+}
+@media screen and (min-width: 2560px){
+    .hero h1{
+        padding: 0 35rem;
+        /* font-size: 15rem; */
+    }
+    .hero .hero_divider{
+        width: 35rem;
+        margin: 10rem 0;
+    }
+    .hero .buttons{
+        display: block;
+    }
+    .hero button{
+        width: 35rem;
+        height: 10rem;
+        margin: 2rem;
+        font-size: 2.5rem;
+    }
+
+    
+}
+
+
+
+
 
 /* footer */
 footer{
