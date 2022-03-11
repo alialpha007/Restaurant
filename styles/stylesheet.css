@@ -34,7 +34,8 @@ h3{
 }
 p{
     font-size: 1.3rem;
-    font-family: var(--paragraph-font)
+    font-family: var(--paragraph-font);
+    line-height: 1.5;
 }
 li{
     font-size: 1.7rem;
@@ -73,13 +74,13 @@ nav ul li{
     color: var(--grey-color);
     border-bottom: 1px solid ;
     cursor: pointer;
-    transition: transform 0.5s;
+    /* transition: transform 0.5s; */
     
 }
 
-nav ul li:hover{
+/* nav ul li:hover{
     transform: scale(1.2);
-}
+} */
 
 nav .menu__icon{
     fill: var(--white-color);
@@ -132,7 +133,12 @@ nav .icons{
         color: var(--white-color);
         cursor: pointer;
         margin-right: 2rem; 
+            transition: transform 0.5s;
+
     }
+    nav ul li:hover{
+    transform: scale(1.2);
+}
     nav ul li{
         margin-right: 2rem; 
     }
@@ -336,7 +342,6 @@ nav .icons{
 @media screen and (min-width: 2560px){
     .hero h1{
         padding: 0 35rem;
-        /* font-size: 15rem; */
     }
     .hero .hero_divider{
         width: 35rem;
@@ -355,7 +360,166 @@ nav .icons{
     
 }
 
+/* Statement Section */
 
+.grid{
+    display: grid;
+    align-self: center;
+    }
+
+.statement{
+    background-image: url(/images/pattern1.png);
+    background-size: cover;
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
+   
+}
+
+.content{
+    padding: 8rem 5rem 4rem 5rem;
+}
+
+.statement .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.statement .content h2{
+    color: var(--golden-color);
+}
+
+
+
+.statement .content .golden_divider{
+    width: 20.3rem;
+    margin: 2rem 0rem ;
+}
+
+.statement .content p{
+    text-align: center;
+    padding: 0 3rem;
+}
+
+.statement .content .cook{
+  margin-top: 2rem
+}
+
+.statement .dish{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+.statement .dish img{
+    width: 35rem;
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1439px){
+
+.grid--1x2{
+grid-template-columns: repeat(2, 1fr);
+}
+
+
+.content{
+    padding: 8rem 5rem 4rem 5rem;
+}
+
+.statement .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.statement .content h2{
+    color: var(--golden-color);
+}
+
+
+.statement .dish{
+    margin: 0;
+    display: block;
+    align-self: center;
+}
+.statement .dish img{
+    width: clamp(38rem, 50vw, 45rem );
+}
+}
+@media screen and (min-width: 1040px) and (max-width: 1440px){
+    .grid--1x2{
+        grid-template-columns: 30% 70% repeat(2, 1fr);
+        }
+    .statement{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    }
+.content{
+    padding: 15rem 0rem;
+}
+
+
+.statement .content .paragraph{
+    width: 40rem;
+}
+.statement .dish{
+    
+    display: block;
+    align-self: center;
+}
+.statement .dish img{
+    width: 55rem;
+}
+}
+@media screen and (min-width: 2560px){
+    .grid--1x2{
+        grid-template-columns: 50% 50% repeat(2, 1fr);
+        justify-items: center;
+        }
+    
+    .statement{
+        padding-top: 8rem;
+       
+    }  
+    .statement .content{
+       
+        max-width: 100%;
+    }   
+    .statement .content h2{
+        color: var(--golden-color);
+        font-size: 5rem;
+    }
+    
+    .statement .content .golden_divider{
+        width: 25.3rem;
+        margin: 2rem 0rem ;
+    }
+    .statement .content p{
+        /* width: 46rem; */
+        font-size: 1.8rem;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .statement .content .cook{
+      margin-top: 2rem
+    }
+    
+    .statement .dish{
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .statement .dish img{
+        width: 90rem;
+        margin-left: 8rem;
+    }
+    
+}
 
 
 
