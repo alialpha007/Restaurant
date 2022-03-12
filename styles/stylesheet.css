@@ -683,9 +683,235 @@ grid-template-columns: repeat(2, 1fr);
     }
     
 }
+/* DISH MENU */
 
 
+ .grid1{
+    display: grid;
+    }
 
+    .grid--1x2{
+        grid-template-columns: auto;
+        align-self: center;
+       
+        }
+.menu{
+    background-image: url(/images/pattern23.png);
+    padding: 0 3rem;
+}
+
+.menu .col .center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu h2{
+    color: var(--golden-color);
+    text-align: center;
+    margin-top: 8rem;
+}
+.menu .divider{
+    width: 19rem;
+    margin: 1rem 0rem 3rem 0rem;
+    margin-right: 0;
+}
+.menu .dishes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #cc99003a;
+    margin-left: 0rem;
+    width: 95%;
+   
+}
+.menu h3{
+    color: var(--golden-color);
+    padding-bottom: 1rem;
+}
+
+.menu p{
+    color: rgba(48, 48, 48, 0.954);
+    margin-top: 1rem;
+}
+
+@media screen and (min-width: 390px){
+    .menu{
+        background-image: url(/images/pattern23.png);
+        padding: 0 3rem;
+    }
+
+    .menu p{
+        color: rgba(48, 48, 48, 0.954);
+        margin-top: 1rem;
+        width: 95%;
+    }
+}
+
+
+@media screen and (min-width: 768px){
+   
+        .grid--1x2{
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 5rem;
+            align-self: center;
+           
+            }
+            .menu{
+                background-image: url(/images/pattern23.png);
+                padding: 0 11rem;
+            }
+        .menu .dishes{
+            width: 100%;
+             }
+
+}
+@media screen and (min-width: 1131px){
+    
+    .grid--1x2{
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 5rem;
+            align-self: center;
+           
+    }
+    
+    .menu h2{
+        color: var(--golden-color);
+        text-align: center;
+        margin-top: 8rem;
+    }
+  
+    .menu .dishes{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #cc99003a;
+        /* margin-left: 0rem; */
+        margin: 0;
+        width: 80%;
+       
+    }
+    
+    .menu p{
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 2560px){
+    .grid1{
+        display: grid;
+        }
+    
+        .grid--1x2{
+            grid-template-columns: repeat(2, 1fr);
+            align-self: center;
+            column-gap: none;
+           
+            }
+    .menu{
+        background-image: url(/images/pattern23.png);
+        padding: 0 20rem;
+    }
+    
+    .menu .col .center{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .menu h2{
+        color: var(--golden-color);
+        text-align: center;
+        margin-top: 8rem;
+        font-size: 5rem;
+    }
+    .menu .divider{
+        width: 19rem;
+        margin: 1rem 0rem 3rem 0rem;
+        margin-right: 0;
+    }
+    .menu .dishes{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #cc99003a;
+        margin-left: 0rem;
+        width: 100%;
+       
+    }
+    .menu h3{
+        color: var(--golden-color);
+        padding-bottom: 1rem;
+        font-size: 3rem;
+    }
+    
+    .menu p{
+        color: rgba(48, 48, 48, 0.954);
+        margin-top: 1rem;
+        font-size: 1.8rem;
+        width: 100%;
+    }
+}
+
+/* .special{
+    width: 5.4rem;
+    height: 1.7rem;
+    background-color: #cc9900d0;
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: var(--paragraph-font);
+    padding: 0.5rem;
+    position: relative;
+    left: 38%;
+    margin-bottom: 1px;
+}
+
+.golden_box{
+    border: 1px solid #cc99008a;
+    /* width: 100%; 
+    padding: 0rem 0rem;
+    margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 375px){
+    .special{
+        left: 40%
+       
+    }
+}
+@media screen and (min-width: 425px){
+    .special{
+        left: 41%
+       
+    }
+}
+@media screen and (min-width: 768px){
+    .special{
+        left: 38%
+       
+    }
+}
+@media screen and (min-width: 1024px){
+    .special{
+        left: 38%
+       
+    }
+}
+@media screen and (min-width: 1131px){
+    .special{
+        left: 29%
+       
+    }
+}
+@media screen and (min-width: 1440px){
+    .special{
+        left: 21%
+       
+    }
+} */
 
 
 
