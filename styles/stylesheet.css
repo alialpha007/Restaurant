@@ -365,6 +365,8 @@ nav .icons{
 .grid{
     display: grid;
     align-self: center;
+    /* align-items: center;
+    justify-content: center; */
     }
 
 .statement{
@@ -439,9 +441,9 @@ grid-template-columns: repeat(2, 1fr);
 }
 
 
+
 .statement .dish{
     margin: 0;
-    display: block;
     align-self: center;
 }
 .statement .dish img{
@@ -466,13 +468,9 @@ grid-template-columns: repeat(2, 1fr);
 .statement .content .paragraph{
     width: 40rem;
 }
-.statement .dish{
-    
-    display: block;
-    align-self: center;
-}
 .statement .dish img{
     width: 55rem;
+    align-self: center;
 }
 }
 @media screen and (min-width: 2560px){
@@ -499,7 +497,6 @@ grid-template-columns: repeat(2, 1fr);
         margin: 2rem 0rem ;
     }
     .statement .content p{
-        /* width: 46rem; */
         font-size: 1.8rem;
         padding: 0;
         margin: 0;
@@ -513,6 +510,7 @@ grid-template-columns: repeat(2, 1fr);
         margin: 0;
         display: flex;
         justify-content: center;
+        align-self: center;
     }
     .statement .dish img{
         width: 90rem;
@@ -520,6 +518,174 @@ grid-template-columns: repeat(2, 1fr);
     }
     
 }
+
+/* Ingredients */
+.ingredients{
+    background-image: url(/images/bg5.png);
+    background-size: cover;
+    overflow: hidden;
+    padding: 8rem 16rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: end; 
+    align-items: center; 
+}
+.ingredients .empty{
+    background-color: red;
+    height: 46rem;
+    width: 46rem;
+    display: none;
+}
+
+.ingredients .ingredients_desciption{
+    background-color: rgba(0, 0, 0, 0.454);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 5rem 8rem;
+    margin: 0 0rem;
+}
+
+.ingredients .ingredients_desciption h2{
+    color: var(--white-color);
+}
+
+.ingredients .ingredients_desciption .divider{
+    margin: 2rem 0;
+   
+   
+}
+
+.ingredients .ingredients_desciption p{
+    color: var(--white-color);
+    text-align: center;
+}
+
+.ingredients .ingredients_desciption .spices{
+    display: flex;
+    margin: 3rem 0 1rem 0;
+}
+
+.ingredients .ingredients_desciption .masala{
+    width: 8rem;
+    height: 8rem;
+    margin-top: 0rem;
+   border-radius: 50%;
+   border: 4px solid rgba(65, 65, 65, 0.488);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1130px){
+
+    .grid--1x2{
+        grid-template-columns: 50% 50% repeat(2, 1fr);
+        justify-items: center;
+        }
+    .ingredients .empty{
+        display: none;
+    }
+    
+    .ingredients .ingredients_desciption{
+        width: 36rem;
+        height: 40rem;
+        background-color: rgba(0, 0, 0, 0.454);
+        padding: 6rem 4rem 8rem 4rem;
+      
+    }
+}
+@media screen and (min-width: 1130px) and (max-width: 1440px){
+
+    .ingredients{
+        background-image: url(/images/bg5.png);
+        padding: 8rem 18rem;
+       display: flex;
+       flex-direction: row;
+       justify-content: end; 
+        align-items: center; 
+    }
+    .ingredients .empty{
+        background-color: rgba(255, 0, 0, 0);
+        height: 46rem;
+        width: 46rem;
+        display: block;
+    }
+    
+    .ingredients .ingredients_desciption{
+        width: 36rem;
+        height: 40rem;
+        padding: 6rem 5rem 8rem;
+    }
+    
+}
+@media screen and (min-width: 1441px) and (max-width: 1613px){
+
+    .ingredients{
+        background-image: url(/images/bg5.png);
+        padding: 8rem 38rem;
+       display: flex;
+       flex-direction: row;
+       justify-content: end; 
+        align-items: center; 
+    }
+    .ingredients .empty{
+        background-color: rgba(255, 0, 0, 0);
+        height: 46rem;
+        width: 46rem;
+        display: block;
+    }
+    
+    .ingredients .ingredients_desciption{
+        width: 60rem;
+        height: 50rem;
+        padding: 7rem 6rem 10rem;
+    }
+
+    .ingredients .ingredients_desciption h2{
+        font-size: 3.8rem;
+    }
+
+    .ingredients .ingredients_desciption p{
+        font-size: 1.8rem;
+
+    }
+    
+}
+@media screen and (min-width: 2560px){
+
+    .ingredients{
+        background-image: url(/images/bg5.png);
+        padding: 8rem 38rem;
+       display: flex;
+       flex-direction: row;
+       justify-content: end; 
+        align-items: center; 
+    }
+    .ingredients .empty{
+        background-color: rgba(255, 0, 0, 0);
+        height: 46rem;
+        width: 46rem;
+        display: block;
+    }
+    
+    .ingredients .ingredients_desciption{
+        width: 60rem;
+        height: 50rem;
+        padding: 7rem 6rem 10rem;
+    }
+
+    .ingredients .ingredients_desciption h2{
+        font-size: 5rem;
+    }
+
+    .ingredients .ingredients_desciption p{
+        font-size: 1.8rem;
+
+    }
+    
+}
+
+
+
 
 
 
