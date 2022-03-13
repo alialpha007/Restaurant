@@ -16,6 +16,8 @@
 </head>
 
 <body>
+
+    <!-------------------------------- Navigation -------------------------------->
     <header>
         <nav class="collapsible">
             <a href="/"><img class="logo" src="/images/Logo.png" alt="">
@@ -26,7 +28,7 @@
                 <use xlink:href="/images/sprite.svg#menu"></use>
             </svg>
 
-            <ul class="collapsible__content">
+            <ul class="nav collapsible__content">
                 <li>Home</li>
                 <li>About</li>
                 <li>Ingredients</li>
@@ -48,7 +50,8 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
+
+    <!-------------------------------- Hero Section -------------------------------->
     <div class="hero">
         <h1>the right ingredients
             for the right food</h1>
@@ -61,7 +64,8 @@
         </div>
     </div>
 
-    <!-- Statement Section -->
+
+    <!-------------------------------- Statement Section -------------------------------->
     <section class="statement grid1 grid--1x2">
         <div class="content">
             <h2>Just the right food</h2>
@@ -81,7 +85,8 @@
         </div>
     </section>
 
-    <!-- Ingredients Section -->
+
+    <!-------------------------------- Ingredients Section -------------------------------->
     <section class="ingredients grid grid--1x2">
         <div class="empty">
             &nbsp;
@@ -101,6 +106,9 @@
         </div>
     </section>
 
+
+
+    <!-------------------------------- Dish Menu Section -------------------------------->
     <section class="grid1 grid--1x2  menu">
 
 
@@ -202,31 +210,78 @@
 
     </section>
 
-    <!-- Ingredients Section -->
+
+    <!-------------------------------- Reviews Section -------------------------------->
     <section class="reviews">
-        <h2>Guest Reviews</h2>
-        <img class="divider" src="/images/white_divider.png" alt="">
-        <p>If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for
-            more. Perfect materials and freshly baked food, delicious Lambda cakes, muffins, and gourmet coffees make us
-            hard to resist! Stop in today and check us out!</p>
+        <div class="review_box">
+            <h2>Guest Reviews</h2>
+            <img class="divider" src="/images/white_divider.png" alt="">
+            <p>If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back
+                for
+                more. Perfect materials and freshly baked food, delicious Lambda cakes, muffins, and gourmet coffees
+                make us
+                hard to resist! Stop in today and check us out!</p>
+            <p class="place">- food inc, New York</p>
+        </div>
     </section>
 
 
-    <!-- <footer>
-        <div class="collapsible collapsible--expanded">
-            <header class="collapsible__header">
-                <h2 class="collapsible__heading">About Us</h2>
-                <span class="icon__container">
-                    <svg class="icon collapsible__chevron">
-                        <use xlink:href="/images/sprite.svg#chevron"></use>
-                    </svg>
-                </span>
-            </header>
-            <div class="collapsible__content">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            </div>
+    <!-------------------------------- Booking Section -------------------------------->
+    <section class="booking grid grid--1x2">
+        <div class="images">
+            <img class="img1" src="/images/imageW.png" alt="">
+            <img class="img2" src="/images/imageX.png" alt="">
         </div>
-    </footer>
+
+        <div class="form_box">
+            <h2>Just the right food</h2>
+            <img class="divider" src="/images/golden_Divider.png" alt="">
+            <p>If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back
+                for
+                more. Perfect materials and freshly baked food.</p>
+
+            <p>Delicious Lambda cakes, muffins, and gourmet coffees make us hard to resist! Stop in today and check us
+                out!
+                Perfect materials and freshly baked food.</p>
+
+            <form action="none">
+                <div class="row">
+                    <span>
+                        <label for="fullname">Name</label>
+                        <input id="fullname" type="text" name="name" placeholder="Enter Your Name" required />
+                    </span>
+
+                    <span>
+                        <label for="arrival date">Date</label>
+                        <input id="arrival date" type="date" name="date" required />
+
+                    </span>
+
+                </div>
+
+                <div class="row">
+
+                    <span>
+                        <label for="email">Email</label>
+                        <input id="email" type="text" name="email" placeholder="Enter Your Email" required />
+                    </span>
+
+                    <span>
+                        <label for="Package">Party Number</label>
+                        <select id="Package" name="select" required>
+                            <option value="party number">party number</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </span>
+
+                </div>
+            </form>
+            <button>Book Now!</button>
+        </div>
+    </section>
+
     <footer>
         <div class="collapsible collapsible--expanded">
             <header class="collapsible__header">
@@ -256,7 +311,22 @@
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             </div>
         </div>
-    </footer> -->
+    </footer>
+    <footer>
+        <div class="collapsible collapsible--expanded">
+            <header class="collapsible__header">
+                <h2 class="collapsible__heading">About Us</h2>
+                <span class="icon__container">
+                    <svg class="icon collapsible__chevron">
+                        <use xlink:href="/images/sprite.svg#chevron"></use>
+                    </svg>
+                </span>
+            </header>
+            <div class="collapsible__content">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+        </div>
+    </footer>
     <script src="/js/main.js"></script>
 </body>
 
