@@ -12,43 +12,38 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:wght@700&family=Lato:ital@0;1&family=Open+Sans:wght@400;700&family=Yeseva+One&display=swap"
         rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <title>Restaurant</title>
 </head>
 
 <body>
 
     <!-------------------------------- Navigation -------------------------------->
-    <header>
-        <nav class="collapsible">
-            <a href="/"><img class="logo" src="/images/Logo.png" alt="">
-            </a>
+    <nav>
+        <input type="checkbox" id="check">
+
+        <img class="logo" src="/images/Logo.png" alt="">
 
 
-            <svg class="menu__icon nav__toggler collapsible">
-                <use xlink:href="/images/sprite.svg#menu"></use>
-            </svg>
-
-            <ul class="nav collapsible__content">
-                <li>Home</li>
-                <li>About</li>
-                <li>Ingredients</li>
-                <li>Menu</li>
-                <li>Reviews</li>
-                <li>Reservations</li>
-            </ul>
-            <div class="icons">
-
-                <a href="/"><svg class="icon">
-                        <use xlink:href="/images/sprite.svg#twitter"></use>
-                    </svg></a>
-                <a href="/"><svg class="icon">
-                        <use xlink:href="/images/sprite.svg#youtube"></use>
-                    </svg></a>
-                <a href="/"><svg class="icon">
-                        <use xlink:href="/images/sprite.svg#facebook"></use>
-                    </svg></a>
-        </nav>
-    </header>
+        <ul>
+            <li class="nav__item"><a href="#">Home</a></li>
+            <li class="nav__item"><a href="#">About</a></li>
+            <li class="nav__item"><a href="#">Ingredients</a></li>
+            <li class="nav__item"><a href="#">Menu</a></li>
+            <li class="nav__item"><a href="#">Reviews</a></li>
+            <li class="nav__item"><a href="#">Reservations</a></li>
+        </ul>
+        <div class="icons">
+            <img class="icon" src="/images/twitter.png" alt="">
+            <img class="icon" src="/images/youtube.png" alt="">
+            <img class="icon" src="/images/facebook.png" alt="">
+        </div>
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+    </nav>
 
 
     <!-------------------------------- Hero Section -------------------------------->
@@ -282,52 +277,45 @@
         </div>
     </section>
 
+
+    <!-------------------------------- Footer Section -------------------------------->
     <footer>
-        <div class="collapsible collapsible--expanded">
-            <header class="collapsible__header">
-                <h2 class="collapsible__heading">About Us</h2>
-                <span class="icon__container">
-                    <svg class="icon collapsible__chevron">
-                        <use xlink:href="/images/sprite.svg#chevron"></use>
-                    </svg>
-                </span>
-            </header>
-            <div class="collapsible__content">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        <div class="foot about_us">
+            <h3>About Us</h3>
+            <img src="/images/white_divider.png" alt="" class="divider">
+            <p>Lambda's new and expanded Chelsea location represents a truly authentic <span class="bold">Greek</span>
+                patisserie,
+                featuring
+                breakfasts of fresh croissants and steaming bowls of café.
+            </p>
+            <p> Lamda the best restaurant in town</p>
+        </div>
+        <div class="foot open_hours">
+            <h3>Opening Hours</h3>
+            <img src="/images/white_divider.png" alt="" class="divider">
+            <p><span class="bold">Mon-Thu:</span> 7:00am-8:00pm</p>
+            <p><span class="bold">Fri-Sun:</span> 7:00am-8:00pm</p>
+            <div class="cards">
+                <img src="/images/card.png" alt="">
+                <img src="/images/mastercard.png" alt="">
+                <img src="/images/paypal.png" alt="">
+                <img src="/images/visacard.png" alt="">
+            </div>
+        </div>
+        <div class="foot location">
+            <h3>Our Location</h3>
+            <img src="/images/white_divider.png" alt="" class="divider">
+            <p class="bold">19th Paradise Street Sitia</p>
+            <p class="bold">128 Meserole Avenue</p>
+            <div class="social_media">
+                <img src="/images/facebook_1.png" alt="">
+                <img src="/images/twitter_1.png" alt="">
+                <img src="/images/paypal.png" alt="">
+                <img src="/images/card.png" alt="">
             </div>
         </div>
     </footer>
-    <footer>
-        <div class="collapsible collapsible--expanded">
-            <header class="collapsible__header">
-                <h2 class="collapsible__heading">About Us</h2>
-                <span class="icon__container">
-                    <svg class="icon collapsible__chevron">
-                        <use xlink:href="/images/sprite.svg#chevron"></use>
-                    </svg>
-                </span>
-            </header>
-            <div class="collapsible__content">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            </div>
-        </div>
-    </footer>
-    <footer>
-        <div class="collapsible collapsible--expanded">
-            <header class="collapsible__header">
-                <h2 class="collapsible__heading">About Us</h2>
-                <span class="icon__container">
-                    <svg class="icon collapsible__chevron">
-                        <use xlink:href="/images/sprite.svg#chevron"></use>
-                    </svg>
-                </span>
-            </header>
-            <div class="collapsible__content">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            </div>
-        </div>
-    </footer>
-    <script src="/js/main.js"></script>
+
 </body>
 
 </html>

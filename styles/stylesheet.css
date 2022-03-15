@@ -13,7 +13,6 @@
 
 html{
     font-size: 62.5%;
-    
 }
 
 /* -------------------- Typography -------------------- */
@@ -31,6 +30,7 @@ h2{
 }
 h3{
     font-size: 1.7rem;
+    --footer-font: 'Open Sans', sans-serif;
 }
 p{
     font-size: 1.3rem;
@@ -39,188 +39,201 @@ p{
 }
 li{
     font-size: 1.7rem;
-    font-family: var(--menu-review-font)
+    font-family: var(--menu-review-font);
+    list-style: none;
+    
+    
 }
 
 /* -------------------- Menu -------------------- */
-nav{
-    background-color: transparent;
-    color: var(--white-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 1rem 1rem 0rem 1rem;
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    /* box-sizing: border-box; */
+  }
+
+
+  nav{
+    background-image: url(/images/bgtop.png);
+    box-shadow: -4px -2px 29px -5px rgba(0,0,0,0.68);
     position: fixed;
-    top: 0;
+    height: 80px;
     width: 100%;
-}
-nav .logo{
-    width: 80px;
-    height: 50px;
-    margin: 0rem;
-}
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+  }
+  nav .logo{
+    margin-left: 10px;
+  }
+  nav{
+      display: flex;
+      justify-content: space-evenly;
 
-nav ul{
-    width: 100%;
-    list-style-type: none;
-    padding: 1rem;
-   
-}
-
-nav ul li{
-    padding: 1rem 0;
-    color: var(--grey-color);
-    border-bottom: 1px solid ;
-    cursor: pointer;
-    /* transition: transform 0.5s; */
+  }
+  nav ul{
+    margin-right: 0px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
     
-}
-
-/* nav ul li:hover{
-    transform: scale(1.2);
-} */
-
-nav .menu__icon{
-    fill: var(--white-color);
-    width: 40px;
-    height: 40px;
-    margin-right: 20px;
-    display: block;
-    opacity: 0.5;
+  }
+  nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  a.active,a:hover{
+    background: #dde0df4d;
+    transition: .5s;
+  }
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 10px;
     cursor: pointer;
-}
-
-/* navigation-animation */
-nav .nav__toggler{
-    opacity: 0.5;
-    transition: box-shadow 0.15s;
-
-}
-nav.collapsible--expanded .nav__toggler{
-    opacity: 1;
-    box-shadow: 0 0 5px 1px rgb(255, 255, 255);
-    border-radius: 5px;
-}
-
-
-nav .icons{
     display: none;
+  }
+  nav .icons{
+    display: inline;
+    margin-right: 3rem;
+    align-self: center;
+
+}
+nav .icons .icon{
+    width: 20px;
+    height: 20px;
+    margin-right: 0rem;
+    cursor: pointer;
 }
 
-@media  screen and (min-width: 768px) {
-   
-    nav .logo{
-        margin-left: 2rem;
-        width: 90px;
-        height:auto;
+  #check{
+    display: none;
+  }
+  @media (max-width: 952px){
+    label.logo{
+      font-size: 30px;
+      padding-left: 50px;
     }
-    nav .menu__icon{
-        display: none;
+    nav{
+        justify-content: space-evenly;
     }
-    nav ul{
-        width: auto;
-        display: flex;
-        max-height: 100%;
-        opacity: 1;
-        cursor: none;
-        margin-left: 3%;
-
-    }
-    nav ul li{
-        border: 0;
-        color: var(--white-color);
-        cursor: pointer;
-        margin-right: 2rem; 
-            transition: transform 0.5s;
-
-    }
-    nav ul li:hover{
-    transform: scale(1.2);
-}
-    nav ul li{
-        margin-right: 2rem; 
-    }
-    nav ul li:last-child{
-        margin-right: 0.5rem;
+    nav ul li a{
+      font-size: 16px;
     }
     nav .icons{
-        display: block;
+        display: inline;
         margin-right: 3rem;
-
+       
+    
     }
-    nav .icons .icon{
-        width: 20px;
-        height: 20px;
-        margin-right: 0.3rem;
-        fill: var(--golden-color);
+  }
+  @media (max-width: 858px){
+    .checkbtn{
+      display: block;
+    }
+    nav{
+        background-color: #cc9900f1;
+        background-image: none;
+        padding-bottom: 1rem;
         
     }
-}
-
-@media  screen and (min-width: 1024px) {
-   
-    nav .logo{
-        margin-left: 80%;
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background-color: #cc9900f1;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
     }
-    nav ul{
-        margin-left: 20%;
+    nav{
+        justify-content: space-between;
     }
-    nav ul li:last-child{
-        margin-right: 1rem;
+    nav ul li{
+      display: block;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.31);
+      margin: 0 10rem;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+      background: none;
+      color: none;
+      
+    }
+    #check:checked ~ ul{
+      left: 0;
     }
     nav .icons{
-        margin-right: 11%;
+        display: none;
+        margin-right: 3rem;
+    
     }
-    nav .icons .icon{
-        margin-right: 0.5rem;
+  }
+  @media (max-width: 320px){
+    .checkbtn{
+      display: block;
+    }
+    nav{
+        background-color: #cc9900f1;
+        background-image: none;
+        width: 86.8%;
         
-    } 
-}
-
-@media  screen and (min-width: 1440px) {
-   
-    nav .logo{
-        margin-left: 80%;
     }
-    nav ul{
-        margin-left: 40%;
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background-color: #cc9900f1;
+      top: 80px;
+      width: 86.8%;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
     }
-   
-    nav ul li:last-child{
-        margin-right: 1rem;
+    nav{
+        justify-content: space-between;
+    }
+    nav ul li{
+      display: block;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.31);
+      /* margin: 0 10rem; */
+      width: 86.8%;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+      background: none;
+      color: #cc9900;
+      
+    }
+    #check:checked ~ ul{
+      left: 0;
     }
     nav .icons{
-        margin-right: 11%;
-    }
-    nav .icons .icon{
-        margin-right: 0.5rem; 
-    }
+        display: none;
+        margin-right: 3rem;
     
-}
-
-
-@media  screen and (min-width: 2560px) {
-   
-    nav .logo{
-        margin-left: 250%;   
     }
-    nav ul{
-        margin-left: 63%;
-
-    }
-
-    nav ul li:last-child{
-        margin-right: 0rem;
-    }
-    
-    nav .icons{
-        margin-right: 10%;
-    }
-    nav .icons .icon{
-        margin-right: 0.5rem;    
-    } 
-}
+  }
 
 /* -------------------- Hero -------------------- */
 .hero{
@@ -1007,6 +1020,10 @@ background-size: cover;
    width: 10rem;
    height: 1.5rem;
 }
+.booking .form_box form input{
+    padding-left: 5px;
+
+}
 
 .booking .form_box form input, select{
     margin-bottom: 1rem;
@@ -1047,6 +1064,11 @@ background-size: cover;
         .booking .form_box form{
          width: 240px;
         }
+        .booking .form_box form label{
+            margin-top: 20px;
+            
+
+        }
         
 }
 @media screen and (min-width: 768px){
@@ -1072,6 +1094,11 @@ background-size: cover;
 
         .booking .form_box form{
          width: 370px;
+        }
+        .booking .form_box form label{
+            margin-top: 20px;
+            
+
         }
 
         .booking .form_box form label, input, select{
@@ -1111,6 +1138,7 @@ background-size: cover;
         .booking .form_box form{
          width: 400px;
         }
+       
 
         .booking .form_box form label, input, select{
             display: block;
@@ -1139,6 +1167,9 @@ background-size: cover;
     }
     .booking{
        padding: 90px 140px; 
+    } .booking .form_box form label{
+        margin-bottom: 4px;
+
     }
         
 }
@@ -1159,6 +1190,11 @@ background-size: cover;
     .booking .form_box form{
         width: 280px;
        }
+       .booking .form_box form label{
+        margin-bottom: 4px;
+       
+
+    }
     .booking .form_box form label, input, select{
         display: block;
         width: 12rem;
@@ -1178,7 +1214,7 @@ background-size: cover;
         .booking .images{
          display:inline-flex;
          }
-
+         
          .booking .images .img1{
              display: inline;
              margin-right: 50px;
@@ -1192,10 +1228,11 @@ background-size: cover;
             width: 280px;
            }
            .booking .form_box form label{
-               margin: 0;
+               margin-bottom: 4px;
                padding: 0;
                position: relative;
                top: 10px;
+
            }
    
            .booking .form_box form label, input, select{
@@ -1208,6 +1245,7 @@ background-size: cover;
                 margin-bottom: 1rem;
                 border: 1px solid rgba(128, 128, 128, 0.255);  
              }   
+             
 }
 
 
@@ -1215,96 +1253,128 @@ background-size: cover;
 
 /* -------------------- Footer Section -------------------- */
 footer{
-    background-color: var(--footer-color);
-    color: var(--white-color);
-    width: 100vw ;
-}
-
-.collapsible__header{
+    background-color: #191919;
+    color: var(--grey-color);
+    font-weight: 200;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 30px 20px;
 }
 
-.collapsible__content{
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.3s;
+footer div{
+    margin-top: 5%;
 }
 
-/* footer-animation */
-.icon__container .collapsible__chevron{
-    width: 30px;
-    height: 30px;
-    fill: var(--white-color);
+footer h3{
+text-align: center;
 }
-.collapsible__chevron{
-    transition: transform 0.3s;
+footer .divider{
+    width: 15rem;
+    margin: 1rem 0;
+    align-self: center;
+    
 }
-.collapsible--expanded .collapsible__chevron{
-    transform: rotate(90deg);
-
+.foot{
+    display: flex;
+    flex-direction: column;
 }
-
-.collapsible--expanded .collapsible__content{
-    max-height: 100vh;
-    opacity: 1;
-}
-
-/* .special{
-    width: 5.4rem;
-    height: 1.7rem;
-    background-color: #cc9900d0;
-    color: white;
+footer p{
     text-align: center;
-    font-size: 1.2rem;
-    font-family: var(--paragraph-font);
-    padding: 0.5rem;
-    position: relative;
-    left: 38%;
-    margin-bottom: 1px;
+}
+footer p .bold{
+    font-family: sans-serif;
+    font-weight: bold;
+}
+footer .open_hours .cards{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+footer .open_hours .cards img{
+    width: 15px;
+    margin: 0 5px;
+    
+}
+footer .location .social_media{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+footer .location .social_media img{
+    width: 15px;
+    margin: 0 5px;
+    
 }
 
-.golden_box{
-    border: 1px solid #cc99008a;
-    /* width: 100%; 
-    padding: 0rem 0rem;
-    margin-bottom: 3rem;
-}
-
-@media screen and (min-width: 375px){
-    .special{
-        left: 40%
-       
-    }
-}
-@media screen and (min-width: 425px){
-    .special{
-        left: 41%
-       
-    }
-}
 @media screen and (min-width: 768px){
-    .special{
-        left: 38%
-       
+    footer{
+        background-color: #191919;
+        color: var(--grey-color);
+        font-weight: 200;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 60px 30px;
+    }
+    
+    footer div{
+        margin-top: 5%;
+    }
+    
+    footer h3{
+    text-align: center;
+    }
+    footer .divider{
+        width: 15rem;
+        margin: 1rem 0;
+        align-self: center;
+        
+    }
+    .foot{
+        display: flex;
+        flex-direction: column;
+    }
+    footer p{
+        text-align: center;
+    }
+    footer p .bold{
+        font-family: sans-serif;
+        font-weight: bold;
+    }
+    footer .open_hours .cards{
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    footer .open_hours .cards img{
+        width: 15px;
+        margin: 0 5px;
+        
+    }
+    footer .location .social_media{
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    footer .location .social_media img{
+        width: 15px;
+        margin: 0 5px;
+        
     }
 }
+
 @media screen and (min-width: 1024px){
-    .special{
-        left: 38%
-       
-    }
-}
-@media screen and (min-width: 1131px){
-    .special{
-        left: 29%
-       
+    footer{
+        display: grid;
+        grid-template-columns: 35% 45% 20% repeat(3, 1fr);
+        padding:4rem 13rem;
     }
 }
 @media screen and (min-width: 1440px){
-    .special{
-        left: 21%
-       
+    footer{
+        display: grid;
+        grid-template-columns: 30% 40% 20% repeat(3, 1fr);
+        padding:4rem 23rem;
     }
-} */
+}
