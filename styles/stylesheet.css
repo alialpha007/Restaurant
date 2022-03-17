@@ -57,7 +57,7 @@ li{
 
 
   nav{
-    background-image: url(/images/bgtop.png);
+    background-image: url(images/bgtop.png);
     box-shadow: -4px -2px 29px -5px rgba(0,0,0,0.68);
     position: fixed;
     height: 80px;
@@ -237,7 +237,7 @@ nav .icons .icon{
 
 /* -------------------- Hero -------------------- */
 .hero{
-    background-image: url(/images/Bg.png);
+    background-image: url(images/Bg.png);
     background-position: right 35% bottom 45%;
     box-shadow: inset 0 0 5px 2px #282a2d;
     width: 100vw;
@@ -380,7 +380,7 @@ nav .icons .icon{
     }
 
 .statement{
-    background-image: url(/images/pattern1.png);
+    background-image: url(images/pattern1.png);
     background-size: cover;
     width: 100vw;
     height: auto;
@@ -532,7 +532,7 @@ grid-template-columns: repeat(2, 1fr);
 
 /* -------------------- Ingredients Section -------------------- */
 .ingredients{
-    background-image: url(/images/bg5.png);
+    background-image: url(images/bg5.png);
     background-size: cover;
     overflow: hidden;
     padding: 8rem 16rem;
@@ -607,7 +607,7 @@ grid-template-columns: repeat(2, 1fr);
 @media screen and (min-width: 1130px) and (max-width: 1440px){
 
     .ingredients{
-        background-image: url(/images/bg5.png);
+        background-image: url(images/bg5.png);
         padding: 8rem 18rem;
        display: flex;
        flex-direction: row;
@@ -631,7 +631,7 @@ grid-template-columns: repeat(2, 1fr);
 @media screen and (min-width: 1441px) and (max-width: 1613px){
 
     .ingredients{
-        background-image: url(/images/bg5.png);
+        background-image: url(images/bg5.png);
         padding: 8rem 38rem;
        display: flex;
        flex-direction: row;
@@ -664,7 +664,7 @@ grid-template-columns: repeat(2, 1fr);
 @media screen and (min-width: 2560px){
 
     .ingredients{
-        background-image: url(/images/bg5.png);
+        background-image: url(images/bg5.png);
         padding: 8rem 38rem;
        display: flex;
        flex-direction: row;
@@ -706,7 +706,7 @@ grid-template-columns: repeat(2, 1fr);
        
         }
 .menu{
-    background-image: url(/images/pattern23.png);
+    background-image: url(images/pattern23.png);
     padding:3rem 3rem 4rem;
 }
 
@@ -748,7 +748,7 @@ grid-template-columns: repeat(2, 1fr);
 
 @media screen and (min-width: 390px){
     .menu{
-        background-image: url(/images/pattern23.png);
+        background-image: url(images/pattern23.png);
         padding: 3rem 3rem 4rem;
     }
 
@@ -770,7 +770,7 @@ grid-template-columns: repeat(2, 1fr);
            
             }
             .menu{
-                background-image: url(/images/pattern23.png);
+                background-image: url(images/pattern23.png);
                 padding: 5rem 11rem 5rem;
             }
         .menu .dishes{
@@ -787,7 +787,7 @@ grid-template-columns: repeat(2, 1fr);
            
     }
     .menu{
-        background-image: url(/images/pattern23.png);
+        background-image: url(images/pattern23.png);
         padding: 1rem 11rem 5rem;
     }
 
@@ -824,7 +824,7 @@ grid-template-columns: repeat(2, 1fr);
            
             }
     .menu{
-        background-image: url(/images/pattern23.png);
+        background-image: url(images/pattern23.png);
         padding: 0 20rem;
     }
     
@@ -874,7 +874,7 @@ grid-template-columns: repeat(2, 1fr);
 
 .reviews{
 
-    background-image: url(/images/bg2.png);
+    background-image: url(images/bg2.png);
     background-size: cover;
     padding: 2rem;
    
@@ -977,7 +977,7 @@ grid-template-columns: repeat(2, 1fr);
 /* -------------------- Booking Section -------------------- */
 
 .booking{
-background-image: url(/images/pattern1.png);
+background-image: url(images/pattern1.png);
 background-size: cover;
 }
 
